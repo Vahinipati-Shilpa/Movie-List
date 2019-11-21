@@ -1,5 +1,5 @@
 {
-  "name": "reddit",
+  "name": "movie-list",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
