@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row grid-view">
+    <div *ngFor="let key of moviePreviewList" class="movie">
+      <img src="{{key.Poster}}" alt="">
+      <div class="movieDetails">
+        <label>Title: &nbsp;</label>{{key.Title}}
+        <label>Type: &nbsp;</label>{{key.Type}}<br>
+        <label>Year: &nbsp;</label>{{key.Year}}
+        <label>imdbID: &nbsp;</label>{{key.imdbID}}
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <!-- <button mat-raised-button class="btn btn-info" (click)='previous()' [disabled]="pageNumber <= 0">Previous</button>
+    <button mat-raised-button class="btn btn-info m-auto" (click)='next()'
+      [disabled]="pageNumber >= movieListSize - getDefaultPageSize()">Next</button> -->
+      <div class="pagination">
+          <a href="#"  (click)='previous()' >&laquo;</a>
+          <a *ngFor="let page of paginationArr" (click)="setPage(page)" [ngClass] = "{active: getCurrenPage(page)}">{{page}}</a>
+          <a href="#"  (click)='next()'>&raquo;</a>
+        </div>
+  </div>
+</div>
