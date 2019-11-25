@@ -18,7 +18,7 @@
     <button mat-raised-button class="btn btn-success" [disabled]="!appModalData.searchTitle"
       (click)='search()'>Search</button>
     &nbsp;
-    <button mat-raised-button class="btn">Reset</button>
+    <button mat-raised-button class="btn" (click)="reset()">Reset</button>
   </ul>
 </nav>
 <app-search-result></app-search-result>

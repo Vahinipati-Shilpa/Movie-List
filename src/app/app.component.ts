@@ -20,4 +20,10 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
   }
+
+  reset() {
+    this.appModalData.searchTitle = null;
+    this.appModalData.searchPlot = null;
+    this.appModalData.searchYear = null;
+  }
 }
