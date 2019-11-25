@@ -25,13 +25,17 @@ export class SearchResultComponent implements OnInit {
             element.Poster = 'assets/no-image.jpg';
           }
         });
-        console.log(this.appModalData.movieData);
         this.movieListSize = this.appModalData.movieData.length;
         this.setMovieList();
         this.setPaginationArray();
       }
     });
   }
+
+  isMovieListEmpty() {
+    return this.appModalData.movieData.length === 0;
+  }
+  
   ngOnInit() {
     this.subscribeToData();
   }

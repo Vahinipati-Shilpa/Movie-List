@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="row" *ngIf="isMovieListEmpty()">
+      <h1>No movies found!</h1>
+  </div>
   <div class="row grid-view">
     <div *ngFor="let key of moviePreviewList" class="movie">
       <img src="{{key.Poster}}" alt="">

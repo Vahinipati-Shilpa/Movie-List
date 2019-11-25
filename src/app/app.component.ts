@@ -12,7 +12,11 @@ export class AppComponent implements OnInit {
   appModalData: AppModal = new AppModal();
   constructor(private appService: AppService) {}
   search () {
-    this.appService.getMovieData(this.appModalData);
+    if(String(this.appModalData.searchTitle).length < 3) {
+      window.alert('Please enter atleast 3 characters in title');      
+    } else {
+      this.appService.getMovieData(this.appModalData);
+    }
   }
   ngOnInit() {
   }
